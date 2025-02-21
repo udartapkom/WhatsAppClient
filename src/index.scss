@@ -1,0 +1,9 @@
+@use './globalStyle/normalize';
+@use './globalStyle/mixins' as m;
+@use './fonts/raleway.scss';
+* {
+  box-sizing: border-box;
+}
+body {
+  @include m.Body;
+}
