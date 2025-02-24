@@ -1,0 +1,48 @@
+@use '../../../globalStyle/mixins.scss' as m;
+@use '../../../globalStyle/variables.scss' as v;
+.inputContainer {
+  display: flex;
+  width: 100%;
+  height: 36px;
+  flex-shrink: 0;
+}
+.label {
+  margin-bottom: 4px;
+  @include m.Link_small;
+  color: v.$error-color;
+}
+.input {
+  @include m.Body1;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid v.$accent-color;
+  border-color: v.$accent-color;
+  flex-grow: 1;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &::placeholder {
+    color: v.$back-color;
+  }
+
+  &_error{
+    border-color: v.$grey-color;
+    color: v.$grey-color;
+  }
+}
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.error {
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  color: v.$error-color;
+  @include m.Body;
+}

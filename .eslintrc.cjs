@@ -38,7 +38,7 @@ module.exports = {
             jsx: true,
             impliedStrict: 'true',
         },
-        ecmaVersion: 12, // Версия стандарта JavaScript. Последний 12 (2021).
+        ecmaVersion: 15, // Версия стандарта JavaScript. Последний 15 (2024).
         sourceType: 'module', // Позволяет использовать import/export
         project: './tsconfig.json',
     },
@@ -76,6 +76,10 @@ module.exports = {
             },
         ],
         'react/forbid-prop-types': [0],
+        'react/prop-types': [0],
+        'react/require-default-props': [0, {
+            functions: 'defaultArguments',
+        }],
         'react/function-component-definition': [
             'error',
             {
@@ -93,6 +97,7 @@ module.exports = {
             },
         ],
         '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@eslint-react/no-prop-types': [0],
         'no-trailing-spaces': 'off',
         'react/jsx-props-no-spreading': 'off',
         'no-plusplus': 'off',
