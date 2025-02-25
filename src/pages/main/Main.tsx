@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './Main.module.scss';
+import { UniversalInput } from '../../ui-lib/input';
 
 const Main = () => {
   const sendMessage = () => {
@@ -6,13 +8,18 @@ const Main = () => {
   };
 
   return (
-    <main>
-      <div>
-        список
+    <main className={styles.main}>
+      <div className={styles.main__list}>
+        список контактов
       </div>
-      <div>
-        Сообщения
+      <div className={styles.main__messages}>
+        <div>
+          <p>лента сообщений</p>
+          <div className={styles.main__blockMessages}>блок сообщений</div>
+        </div>
+        <UniversalInput id='message' />
       </div>
+
     </main>
   );
 };

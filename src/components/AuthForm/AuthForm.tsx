@@ -8,8 +8,10 @@ const AuthForm = () => {
   const { values, resetForm, handleChange } = HandleChangeValues();
   const authUser = (event: SyntheticEvent) => {
     event.preventDefault();
-    console.log(values);
+    localStorage.setItem('idS', JSON.stringify(values));
     resetForm({});
+    const item = localStorage.getItem('idS');
+    return item ? console.log(JSON.parse(item)) : null;
   };
   return (
     <form className={styles.Form} onSubmit={authUser}>

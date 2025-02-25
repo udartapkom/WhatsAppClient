@@ -8,6 +8,10 @@ const CreateChatForm = () => {
   const { values, resetForm, handleChange } = HandleChangeValues();
   const onCreateChat = (event: SyntheticEvent) => {
     event.preventDefault();
+    localStorage.setItem('idChat', JSON.stringify(values));
+    resetForm({});
+    const item = localStorage.getItem('idChat');
+    return item ? console.log(JSON.parse(item)) : null;
     console.log(values);
     resetForm({});
   };
