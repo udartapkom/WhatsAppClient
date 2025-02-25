@@ -1,0 +1,57 @@
+@use '../../../globalStyle/variables.scss' as v;
+@use '../../../globalStyle/mixins.scss' as m;
+
+.filledButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: v.$accent-color;
+  color: var(--white, v.$white-color);
+
+  @include m.Header2;
+  @include m.noselect;
+
+  &:hover {
+    background: v.$accent_on_hover-color;
+  }
+
+  &:disabled {
+    background: v.$grey-color;
+    cursor: no-drop;
+  }
+}
+
+.emptyButton {
+  @include m.Header2;
+  @include m.noselect;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 8px;
+  border: 1px solid var(--accent, v.$accent-color);
+
+  background-color: transparent;
+  color: v.$accent-color;
+  white-space: nowrap;
+
+  &:hover {
+    color: v.$accent_on_hover-color;
+    border: 1px solid var(--accent, v.$accent-color);
+    background: v.$back-color;
+  }
+
+  &:disabled {
+    color: v.$grey-color;
+    border: 1px solid var(--accent, v.$grey-color);
+    cursor: no-drop;
+  }
+}

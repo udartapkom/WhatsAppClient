@@ -9,7 +9,7 @@
 .label {
   margin-bottom: 4px;
   @include m.Link_small;
-  color: v.$error-color;
+  color: v.$dark-green;
 }
 .input {
   @include m.Body1;
@@ -36,7 +36,7 @@
   justify-content: flex-start;
   width: 100%;
   position: relative;
-  margin-bottom: 4px;
+  margin-bottom: 24px;
 }
 
 .error {
