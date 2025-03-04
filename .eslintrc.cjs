@@ -98,10 +98,11 @@ module.exports = {
         ],
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@eslint-react/no-prop-types': [0],
+        '@typescript-eslint/no-floating-promises': [0],
         'no-trailing-spaces': 'off',
         'react/jsx-props-no-spreading': 'off',
         'no-plusplus': 'off',
         'import/no-extraneous-dependencies': 'off',
-
+        'import/prefer-default-export': 'off',
     }
 };

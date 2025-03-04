@@ -7,4 +7,9 @@
     color: v.$accent-color;
     margin-bottom: 24px;
   }
+  &_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
 }
