@@ -37,6 +37,10 @@
   width: 100%;
   position: relative;
   margin-bottom: 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .error {

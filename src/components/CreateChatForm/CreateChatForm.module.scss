@@ -7,4 +7,10 @@
     color: v.$accent-color;
     margin-bottom: 14px;
   }
+  &_text {
+    @include m.Link_small;
+    color: v.$black1B-color;
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
 }

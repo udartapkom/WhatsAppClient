@@ -14,8 +14,8 @@ const AuthForm = () => {
     localStorage.setItem('idS', JSON.stringify(values));
     resetForm({});
     navigation('/create', { replace: true });
-    const item = localStorage.getItem('idS');
-    return item ? console.log(JSON.parse(item)) : null;
+    /*    const item = localStorage.getItem('idS');
+    return item ? console.log(JSON.parse(item)) : null; */
   };
   return (
     <form className={styles.Form} onSubmit={authUser}>
@@ -41,9 +41,9 @@ const AuthForm = () => {
           onChange={handleChange} />
       </div>
       <div className={styles.Form_container}>
-        <p>Все необходимые параметры нужно взять </p>
-        <Link to='https://console.green-api.com/instanceList'>
-          здесь
+        <p className={styles.Form_text}>Все необходимые параметры нужно взять </p>
+        <Link className={styles.Form_link} to='https://console.green-api.com/instanceList'>
+          &nbsp; здесь
         </Link>
       </div>
       <UniversalButton

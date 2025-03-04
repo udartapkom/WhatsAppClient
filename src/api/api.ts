@@ -10,11 +10,11 @@ const checkResponse = (res: Response) => {
   return res.json();
 };
 
-export const request = (url: string, config?: RequestInit) => fetch(`${process.env.API || api}${url}`, {
+const request = (url: string, config?: RequestInit) => fetch(`${process.env.API || api}${url}`, {
   ...config,
   credentials: 'include',
 }).then(checkResponse);
-export const sendMessage = (messageData: any) => request('1103196009/sendMessage/a4fd76e8556240cc9e466a9786bc025c1d188fcafbe6480a8f', {
+export const sendMessage = (messageData: any) => request('/send', {
   method: 'POST',
   headers: new Headers([
     ['Content-Type', 'application/json'],

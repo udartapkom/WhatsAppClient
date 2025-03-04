@@ -1,0 +1,16 @@
+@use '../../../globalStyle/variables.scss' as v;
+@use '../../../globalStyle/mixins.scss' as m;
+.sendButton {
+  height: 36px;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 8px;
+  border: 1px solid v.$accent-color;
+  color: v.$accent_on_hover-color;
+  &:hover {
+    background: v.$accent_on_hover-color;
+    color: v.$white-hower;
+  }
+}
