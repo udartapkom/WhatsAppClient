@@ -14,8 +14,6 @@ const AuthForm = () => {
     localStorage.setItem('idS', JSON.stringify(values));
     resetForm({});
     navigation('/create', { replace: true });
-    /*    const item = localStorage.getItem('idS');
-    return item ? console.log(JSON.parse(item)) : null; */
   };
   return (
     <form className={styles.Form} onSubmit={authUser}>
